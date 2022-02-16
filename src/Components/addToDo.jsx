@@ -3,7 +3,19 @@ import { HiViewGridAdd } from "react-icons/hi";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { MdOutlineEditNote } from "react-icons/md";
 import svg from "./Dependencies/addItemSvg.svg";
-function addToDo({ setShow }) {
+function addToDo({ setShow, setItems }) {
+  let title;
+  let message;
+  const putTitle = (e) => {
+    title = e.target.value;
+  };
+  const putMessage = (e) => {
+    message = e.target.value;
+  };
+  // this should add item to items in Content Component
+  const addItem = () => {
+    //   setItems()
+  };
   return (
     <div className="transparent_Background">
       <div className="addItem_Screen">
@@ -21,16 +33,16 @@ function addToDo({ setShow }) {
             <div className="addItem_fields">
               <span className="addItem_span">Title: </span>
               <br />
-              <input type="text" name="" id="" />
+              <input onChange={putTitle} type="text" name="" id="" />
               <br />
               <div className="addItem_secondField">
                 <span className="addItem_span">Message: </span>
                 <br />
-                <input type="text" name="" id="" />
+                <input onChange={putMessage} type="text" name="" id="" />
               </div>
             </div>
             <div className="addItem_buttons">
-              <button>Add</button>
+              <button onClick={addItem}>Add</button>
               <button>Clear</button>
             </div>
           </div>

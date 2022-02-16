@@ -41,7 +41,7 @@ function App() {
       <div className="secret">
         <p>Device screen is too small :(</p>
       </div>
-      {show ? <AddToDo setShow={setShow} /> : null}
+      {show ? <AddToDo setShow={setShow} items={setItems} /> : null}
     </div>
   );
 }
