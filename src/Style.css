@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #680ef1;
+}
+.arrowSVG {
+  width: 55px;
+  transform: scaleX(-1) rotateZ(-120deg);
+  position: absolute;
+  top: -15px;
+  right: 50px;
+  user-select: none;
+}
+.addItem_Screen {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background-color: #680ef1;
+  width: 29em;
+  border-radius: 10px;
+  border: 5px solid #680ef1;
+  color: whitesmoke;
+}
+.addItem_Container {
+  display: flex;
+  justify-content: space-between;
+}
+.addItem_svg {
+  margin-top: 40px;
+  margin-right: 50px;
+}
+.addItem_Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 15px;
+  font-size: 25px;
+}
+.transparent_Background {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.addItem_inputs {
+  font-size: 20px;
+  margin: 20px 30px;
+}
+.addItem_buttons {
+  margin-top: 30px;
+}
+.addItem_svg img {
+  opacity: 0.9;
+}
+.addItem_buttons button {
+  padding: 5px 15px;
+  background-color: transparent;
+  color: whitesmoke;
+  border-radius: 5px;
+  border: 3px solid whitesmoke;
+  margin: 0 3px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.addItem_Screen input[type="text"] {
+  background-color: transparent;
+  color: whitesmoke;
+  border: 2px solid whitesmoke;
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 5px 10px;
+}
+.addItem_secondField {
+  margin-top: 10px;
+}
+.emptyList {
+  position: relative;
+  user-select: none;
+}
+.Container {
+  background-color: #680ef1;
+  width: 30em;
+  height: 70%;
+  color: whitesmoke;
+  border-radius: 5px;
+  padding: 10px 5px;
+  box-shadow: 0px 0px 50px -20px black;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em;
+  padding-bottom: 0.5em;
+  font-size: 20px;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.status {
+  width: 20px;
+  height: 20px;
+  background-color: whitesmoke;
+  bottom: -5px;
+  border-radius: 50%;
+  left: -5px;
+  position: absolute;
+  color: #4709a3;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+}
+.profile::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: whitesmoke;
+  transform: rotateZ(45deg);
+  position: absolute;
+  top: 15px;
+  left: 34px;
+}
+.profilePhoto {
+  border-radius: 50%;
+  margin-right: 20px;
+  border: 3px solid whitesmoke;
+  position: relative;
+}
+.closeItemButton {
+  font-size: 28px;
+  cursor: pointer;
+}
+.icon {
+  font-size: 30px;
+  margin-bottom: -5px;
+}
+.addItemButton {
+  font-size: 28px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.addItemButton:hover {
+  transform: rotateZ(-20deg);
+}
+.content {
+  max-height: 30em;
+  margin: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+}
+.content .item {
+  width: 95%;
+  height: auto;
+  background-color: whitesmoke;
+  color: black;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2px 0;
+}
+.item:first-child {
+  border-radius: 5px 5px 0 0;
+}
+.item:last-child {
+  border-radius: 0 0 5px 5px;
+}
+input[type="checkbox"] {
+  width: 35px;
+  height: 35px;
+}
+.itemInfo {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.itemTitle {
+  font-weight: bold;
+}
+.itemMessage {
+  font-size: 90%;
+}
+.group {
+  display: flex;
+}
+footer {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.SVG_Right {
+  position: absolute;
+  z-index: -1;
+  bottom: 30px;
+  right: 6em;
+  opacity: 0.6;
+}
+.SVG_Left {
+  position: absolute;
+  z-index: -1;
+  bottom: 30px;
+  left: 6em;
+  opacity: 0.6;
+}
+.content::-webkit-scrollbar {
+  width: 12px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+.content::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #4709a3;
+}
+.secret {
+  display: none;
+}
+
+@media only screen and (max-width: 500px) {
+  .Container {
+    padding-top: 3em;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+  }
+  .addItem_Screen {
+    padding-top: 3em;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transform: translate(0, 0);
+    border-radius: 0;
+  }
+
+  .content {
+    margin: 0;
+    height: 100%;
+  }
+  .arrowSVG {
+    width: 45px;
+    transform: scaleX(-1) rotateZ(-90deg);
+    position: absolute;
+    top: -12px;
+    right: 20px;
+  }
+  .content .item {
+    width: 100%;
+  }
+  .itemInfo {
+    margin-left: 10px;
+  }
+  .addItem_Container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .addItem_Container input[type="text"] {
+    width: 100%;
+  }
+  .addItem_svg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .addItem_svg img {
+    width: 250px;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .SVG_Right {
+    right: 30px;
+  }
+  .SVG_Left {
+    left: 30px;
+  }
+  .SVG {
+    width: 200px;
+  }
+}
+@media only screen and (max-width: 220px) {
+  .secret {
+    display: unset;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    color: white;
+    background-color: #4709a3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .arrowSVG {
+    display: none;
+  }
+}
