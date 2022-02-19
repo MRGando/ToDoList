@@ -1,20 +1,28 @@
 import React from "react";
 import { HiViewGridAdd } from "react-icons/hi";
 import { AiOutlineCloseCircle } from "react-icons/ai";
-import { MdOutlineEditNote } from "react-icons/md";
 import svg from "./Dependencies/addItemSvg.svg";
-function addToDo({ setShow, setItems }) {
-  let title;
-  let message;
+function addToDo({ setShow, setItems, items }) {
+  let Title;
+  let Message;
   const putTitle = (e) => {
-    title = e.target.value;
+    Title = e.target.value;
   };
   const putMessage = (e) => {
-    message = e.target.value;
+    Message = e.target.value;
   };
+
   // this should add item to items in Content Component
   const addItem = () => {
-    //   setItems()
+    const listItems = [
+      ...items,
+      { id: items.length + 1, title: Title, message: Message },
+    ];
+    setItems(listItems);
+    setShow(false);
+  };
+  const clearVariables = (e) => {
+    e.target.value = "";
   };
   return (
     <div className="transparent_Background">
@@ -33,7 +41,13 @@ function addToDo({ setShow, setItems }) {
             <div className="addItem_fields">
               <span className="addItem_span">Title: </span>
               <br />
-              <input onChange={putTitle} type="text" name="" id="" />
+              <input
+                onChange={putTitle}
+                onDoubleClick={() => clearVariables()}
+                type="text"
+                name=""
+                id=""
+              />
               <br />
               <div className="addItem_secondField">
                 <span className="addItem_span">Message: </span>
@@ -43,7 +57,6 @@ function addToDo({ setShow, setItems }) {
             </div>
             <div className="addItem_buttons">
               <button onClick={addItem}>Add</button>
-              <button>Clear</button>
             </div>
           </div>
           <div className="addItem_svg">

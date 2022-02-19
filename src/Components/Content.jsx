@@ -1,7 +1,7 @@
 import React from "react";
-import { GrTrash } from "react-icons/gr";
 import { AiOutlineAppstoreAdd } from "react-icons/ai";
 import arrow from "./Dependencies/arrow.svg";
+import Item from "./Item";
 function Content({ items, setItems }) {
   const handleCheck = (id) => {
     const listItems = items.map((item) =>
@@ -18,56 +18,12 @@ function Content({ items, setItems }) {
   return (
     <>
       {items.length ? (
-        <div className="content">
-          {items.map((item) => (
-            <div key={item.id} className="item">
-              <div className="group">
-                <input
-                  type="checkbox"
-                  onChange={() => handleCheck(item.id)}
-                  checked={item.checked}
-                />
-                <div
-                  onDoubleClick={() => handleCheck(item.id)}
-                  className="itemInfo"
-                >
-                  <span
-                    style={
-                      item.checked
-                        ? { textDecoration: "line-through", color: "#5a5a" }
-                        : null
-                    }
-                    className="itemTitle"
-                  >
-                    {item.title.length >= 20
-                      ? item.title.slice(0, 20) + "..."
-                      : item.title}
-                  </span>
-                  <p
-                    style={
-                      item.checked
-                        ? { textDecoration: "line-through", color: "#5a5a" }
-                        : null
-                    }
-                    className="itemMessage"
-                  >
-                    {item.message.length >= 40
-                      ? item.message.slice(0, 40) + "..."
-                      : item.message}
-                  </p>
-                </div>
-              </div>
-              <GrTrash
-                onClick={() => deleteItem(item.id)}
-                style={{
-                  fontSize: "22px",
-                  color: "#680EF1",
-                  cursor: "pointer",
-                }}
-              />
-            </div>
-          ))}
-        </div>
+        <Item
+          handleCheck={handleCheck}
+          deleteItem={deleteItem}
+          items={items}
+          setItems={setItems}
+        />
       ) : (
         <div
           className="emptyList"
