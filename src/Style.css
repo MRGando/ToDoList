@@ -63,15 +63,18 @@ body {
   margin: 20px 30px;
 }
 .addItem_buttons {
-  margin-top: 30px;
+  margin: 10px 0;
 }
 .addItem_svg img {
   opacity: 0.9;
 }
+.numb {
+  user-select: none;
+}
 .addItem_buttons button {
   padding: 5px 15px;
-  background-color: transparent;
-  color: whitesmoke;
+  background-color: whitesmoke;
+  color: #4709a3;
   border-radius: 5px;
   border: 3px solid whitesmoke;
   margin: 0 3px;

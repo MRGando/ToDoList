@@ -7,10 +7,13 @@ import ModelTwo from "./Components/Dependencies/model2.svg";
 import AddToDo from "./Components/addToDo";
 
 function App() {
+  //Variables
+  let Title = "";
+  let Message = "";
   const data = JSON.parse(localStorage.getItem("toDoList"));
   const [show, setShow] = useState(false);
   const [items, setItems] = useState([]);
-
+  const [error, setError] = useState(false);
   return (
     <div className="App">
       <img className="SVG_Right SVG" width={300} src={ModelOne} alt="" />
@@ -24,7 +27,15 @@ function App() {
         <p>Device screen is too small :(</p>
       </div>
       {show ? (
-        <AddToDo setShow={setShow} setItems={setItems} items={items} />
+        <AddToDo
+          setShow={setShow}
+          setItems={setItems}
+          items={items}
+          error={error}
+          setError={setError}
+          Title={Title}
+          Message={Message}
+        />
       ) : null}
     </div>
   );

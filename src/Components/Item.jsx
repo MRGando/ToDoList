@@ -1,6 +1,6 @@
 import React from "react";
 import { GrTrash } from "react-icons/gr";
-function Item({ handleCheck, deleteItem, items }) {
+function Item({ handleCheck, deleteItem, items, Title, Message }) {
   return (
     <div className="content">
       {items.map((item) => (
