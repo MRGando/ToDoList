@@ -10,7 +10,6 @@ function App() {
   //Variables
   let Title = "";
   let Message = "";
-  const data = JSON.parse(localStorage.getItem("toDoList"));
   const [show, setShow] = useState(false);
   const [items, setItems] = useState([]);
   const [error, setError] = useState(false);

@@ -3,17 +3,28 @@ import { HiViewGridAdd } from "react-icons/hi";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import svg from "./Dependencies/addItemSvg.svg";
 import { AiOutlineMinus } from "react-icons/ai";
-import { BiError } from "react-icons/bi";
-function addToDo({ setShow, setItems, items, error, setError, Title, Message }) {
+import { BiError, BiDotsHorizontal } from "react-icons/bi";
+
+function addToDo({
+  setShow,
+  setItems,
+  items,
+  error,
+  setError,
+  Title,
+  Message,
+}) {
   //variables
 
-  const defualtValue = <AiOutlineMinus />;
+  const defualtValue = <BiDotsHorizontal />;
   //functionalitis
   const putTitle = (e) => {
     Title = e.target.value;
+    Title = Title.trim();
   };
   const putMessage = (e) => {
     Message = e.target.value;
+    Message = Message.trim();
   };
   const _add_Functionality = () => {
     const listItems = [
