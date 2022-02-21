@@ -2,7 +2,7 @@ import React from "react";
 import { HiViewGridAdd } from "react-icons/hi";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import svg from "./Dependencies/addItemSvg.svg";
-import { BiError, BiDotsHorizontal } from "react-icons/bi";
+import { BiError } from "react-icons/bi";
 
 function addToDo({
   setShow,
@@ -14,7 +14,7 @@ function addToDo({
   Message,
 }) {
   //variables
-  const defualtValue = <BiDotsHorizontal />;
+  const defualtValue = "...";
   //functionalitis
   const putTitle = (e) => {
     Title = e.target.value;
@@ -47,7 +47,6 @@ function addToDo({
     } else if (Title === "" && Message === "") {
       setError(true);
     }
-    console.log(items);
   };
 
   //interface

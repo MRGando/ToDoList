@@ -1,6 +1,6 @@
 import React from "react";
 import { GrTrash } from "react-icons/gr";
-function Item({ handleCheck, deleteItem, items, Title, Message }) {
+function Item({ handleCheck, deleteItem, items }) {
   return (
     <div className="content">
       {items.map((item) => (
@@ -23,9 +23,7 @@ function Item({ handleCheck, deleteItem, items, Title, Message }) {
                 }
                 className="itemTitle"
               >
-                {item.title.length >= 25
-                  ? item.title.slice(0, 25) + "..."
-                  : item.title}
+                {item.title}
               </span>
               <p
                 style={
@@ -35,9 +33,7 @@ function Item({ handleCheck, deleteItem, items, Title, Message }) {
                 }
                 className="itemMessage"
               >
-                {item.message.length >= 45
-                  ? item.message.slice(0, 45) + "..."
-                  : item.message}
+                {item.message}
               </p>
             </div>
           </div>

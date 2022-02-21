@@ -18,12 +18,7 @@ function Content({ items, setItems }) {
   return (
     <>
       {items.length ? (
-        <Item
-          handleCheck={handleCheck}
-          deleteItem={deleteItem}
-          items={items}
-          setItems={setItems}
-        />
+        <Item handleCheck={handleCheck} deleteItem={deleteItem} items={items} />
       ) : (
         <div
           className="emptyList"
