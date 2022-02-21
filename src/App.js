@@ -12,9 +12,11 @@ function App() {
   let Title = "";
   let Message = "";
 
-  const ex = JSON.parse(localStorage.getItem("toDoList"));
-  console.log(ex);
-  const [items, setItems] = useState(ex);
+  const ex =
+    JSON.parse(localStorage.getItem("toDoList")) === null
+      ? []
+      : JSON.parse(localStorage.getItem("toDoList"));
+  const [items, setItems] = useState([...ex]);
   const [show, setShow] = useState(false);
   const [error, setError] = useState(false);
   const [nameData, setNameData] = useState(
