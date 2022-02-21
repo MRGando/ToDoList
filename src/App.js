@@ -11,17 +11,43 @@ function App() {
   //Variables
   let Title = "";
   let Message = "";
+
   const ex = JSON.parse(localStorage.getItem("toDoList"));
   console.log(ex);
   const [items, setItems] = useState(ex);
   const [show, setShow] = useState(false);
   const [error, setError] = useState(false);
+  const [nameData, setNameData] = useState(
+    JSON.parse(localStorage.getItem("fullName"))
+  );
+  const [genData, setGenData] = useState(
+    JSON.parse(localStorage.getItem("gender"))
+  );
+  //functionalities
+  const setting = () => {
+    const fullName = prompt(
+      "What's your name?",
+      "Type your full name ..."
+    ).split(" ");
+    const user_gender = prompt("Female or Male ?", "male , female ...");
+    localStorage.setItem("fullName", JSON.stringify(fullName));
+    localStorage.setItem("gender", JSON.stringify(user_gender));
+    window.location.reload(true);
+  };
   return (
     <div className="App">
-      <AiOutlineSetting className="setting_icon" />
+      <div className="setting_section" onClick={setting}>
+        <span>Your info</span>
+        <AiOutlineSetting className="setting_icon" />
+      </div>
       <img className="SVG_Right SVG" width={300} src={ModelOne} alt="" />
       <div className="Container">
-        <Header items={items} setShow={setShow} />
+        <Header
+          items={items}
+          setShow={setShow}
+          nameData={nameData}
+          genData={genData}
+        />
         <Content items={items} setItems={setItems} />
         <Footer />
       </div>
