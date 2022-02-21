@@ -7,5 +7,9 @@
 # this project is made by React.js 
 pretty Responsive ToDoList (offline) - data will be saved on your localStorage and no one has access to them. > i'm still working on it ...
 
-1- clone this project ``` https://github.com/MRGando/ToDoList.git ```
+1- clone this project using : ``` git clone https://github.com/MRGando/ToDoList.git ```
+2- in terminal , ``` open my-app ``` folder and run it using ``` npm start ```
+3- you will see the project on your ``` localhost:3000 ``` 
+
+enjoy
 
