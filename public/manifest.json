@@ -4,8 +4,8 @@
   "theme_color": "#680ef1",
   "background_color": "#680ef1",
   "display": "standalone",
-  "scope": "/todolist/",
-  "start_url": "https://fitdesign.ir/todolist/",
+  "scope": "/",
+  "start_url": "https://fitdesign.ir/projects/todolist/",
   "icons": [
     {
       "src": "maskable.png",
