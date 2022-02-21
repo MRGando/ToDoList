@@ -5,6 +5,7 @@ import Footer from "./Components/Footer";
 import ModelOne from "./Components/Dependencies/model.svg";
 import ModelTwo from "./Components/Dependencies/model2.svg";
 import AddToDo from "./Components/addToDo";
+import { AiOutlineSetting } from "react-icons/ai";
 
 function App() {
   //Variables
@@ -15,6 +16,7 @@ function App() {
   const [error, setError] = useState(false);
   return (
     <div className="App">
+      <AiOutlineSetting className="setting_icon" />
       <img className="SVG_Right SVG" width={300} src={ModelOne} alt="" />
       <div className="Container">
         <Header items={items} setShow={setShow} />

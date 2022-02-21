@@ -16,6 +16,18 @@ body {
   height: 100vh;
   background-color: #680ef1;
 }
+.setting_icon {
+  position: fixed;
+  top: 20px;
+  color: whitesmoke;
+  right: 20px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.setting_icon:hover {
+  transform: rotateZ(-90deg);
+}
 .arrowSVG {
   width: 55px;
   transform: scaleX(-1) rotateZ(-120deg);
@@ -88,6 +100,7 @@ body {
   border-radius: 4px;
   font-size: 20px;
   padding: 5px 10px;
+  margin-top: 10px;
 }
 .addItem_secondField {
   margin-top: 10px;
@@ -122,9 +135,9 @@ header {
   width: 20px;
   height: 20px;
   background-color: whitesmoke;
-  bottom: -5px;
+  bottom: 0px;
   border-radius: 50%;
-  left: -5px;
+  left: 0px;
   position: absolute;
   color: #4709a3;
   font-size: 10px;
@@ -254,6 +267,11 @@ footer {
     top: 0;
     left: 0;
     border-radius: 0;
+  }
+  .setting_icon {
+    left: 20px;
+    top: 15px;
+    z-index: 10;
   }
   .addItem_Screen {
     padding-top: 3em;

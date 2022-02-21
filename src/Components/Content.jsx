@@ -8,11 +8,11 @@ function Content({ items, setItems }) {
       id === item.id ? { ...item, checked: !item.checked } : item
     );
     setItems(listItems);
-    localStorage.setItem("toDoList", JSON.stringify(listItems));
   };
 
   const deleteItem = (id) => {
     const listItems = items.filter((item) => item.id !== id);
+    localStorage.setItem("toDoList", JSON.stringify(listItems));
     setItems(listItems);
   };
   return (

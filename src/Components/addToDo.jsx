@@ -2,7 +2,6 @@ import React from "react";
 import { HiViewGridAdd } from "react-icons/hi";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import svg from "./Dependencies/addItemSvg.svg";
-import { AiOutlineMinus } from "react-icons/ai";
 import { BiError, BiDotsHorizontal } from "react-icons/bi";
 
 function addToDo({
@@ -15,7 +14,6 @@ function addToDo({
   Message,
 }) {
   //variables
-
   const defualtValue = <BiDotsHorizontal />;
   //functionalitis
   const putTitle = (e) => {
@@ -31,6 +29,7 @@ function addToDo({
       ...items,
       { id: items.length + 1, title: Title, message: Message },
     ];
+    localStorage.setItem("toDoList", JSON.stringify(listItems));
     setItems(listItems);
     setShow(false);
     setError(false);
@@ -48,6 +47,7 @@ function addToDo({
     } else if (Title === "" && Message === "") {
       setError(true);
     }
+    console.log(items);
   };
 
   //interface
@@ -66,12 +66,12 @@ function addToDo({
         <div className="addItem_Container">
           <div className="addItem_inputs">
             <div className="addItem_fields">
-              <span className="addItem_span">Title: </span>
+              <span className="addItem_span">Title</span>
               <br />
               <input onChange={putTitle} type="text" name="" id="" />
               <br />
               <div className="addItem_secondField">
-                <span className="addItem_span">Message: </span>
+                <span className="addItem_span">Message</span>
                 <br />
                 <input onChange={putMessage} type="text" name="" id="" />
               </div>
