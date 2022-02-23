@@ -4,8 +4,8 @@
   "theme_color": "#680ef1",
   "background_color": "#680ef1",
   "display": "standalone",
-  "scope": "/",
-  "start_url": "/",
+  "scope": ".",
+  "start_url": ".",
   "icons": [
     {
       "src": "maskable.png",
