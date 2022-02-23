@@ -19,12 +19,8 @@ function App() {
   const [items, setItems] = useState([...ex]);
   const [show, setShow] = useState(false);
   const [error, setError] = useState(false);
-  const [nameData, setNameData] = useState(
-    JSON.parse(localStorage.getItem("fullName"))
-  );
-  const [genData, setGenData] = useState(
-    JSON.parse(localStorage.getItem("gender"))
-  );
+  const nameData = JSON.parse(localStorage.getItem("fullName"));
+  const genData = JSON.parse(localStorage.getItem("gender"));
   //functionalities
   const setting = () => {
     const fullName = prompt(
