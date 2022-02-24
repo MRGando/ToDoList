@@ -67,12 +67,16 @@ function addToDo({
             <div className="addItem_fields">
               <span className="addItem_span">Title</span>
               <br />
-              <input onChange={putTitle} type="text" name="" id="" />
+              <input onChange={putTitle} type="text" autoFocus />
               <br />
               <div className="addItem_secondField">
                 <span className="addItem_span">Message</span>
                 <br />
-                <input onChange={putMessage} type="text" name="" id="" />
+                <input
+                  onChange={putMessage}
+                  type="text"
+                  placeholder="not necessary ..."
+                />
               </div>
             </div>
             <div className="addItem_buttons">
