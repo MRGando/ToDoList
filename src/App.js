@@ -20,7 +20,7 @@ function App() {
   const [show, setShow] = useState(false);
   const [error, setError] = useState(false);
   const nameData = [
-    JSON.parse(localStorage.getItem("fisrtName")),
+    JSON.parse(localStorage.getItem("firstName")),
     JSON.parse(localStorage.getItem("lastName")),
   ];
   //functionalities

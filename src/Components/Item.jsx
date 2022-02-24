@@ -21,23 +21,30 @@ function Item({ handleCheck, deleteItem, items }) {
                     ? { textDecoration: "line-through", color: "#5a5a" }
                     : null
                 }
-                className="itemTitle"
+                className="itemTitle itemText"
               >
-                {item.title}
+                {item.title.length >= 100
+                  ? item.title.slice(0, 90) + " ..."
+                  : item.title}
               </span>
-              <p
-                style={
-                  item.checked
-                    ? { textDecoration: "line-through", color: "#5a5a" }
-                    : null
-                }
-                className="itemMessage"
-              >
-                {item.message}
-              </p>
+              {item.message ? (
+                <p
+                  style={
+                    item.checked
+                      ? { textDecoration: "line-through", color: "#5a5a" }
+                      : null
+                  }
+                  className="itemMessage itemText"
+                >
+                  {item.message.length >= 100
+                    ? item.message.slice(0, 90) + " ..."
+                    : item.message}
+                </p>
+              ) : null}
             </div>
           </div>
           <GrTrash
+            className="trashBinIcon"
             onClick={() => deleteItem(item.id)}
             style={{
               fontSize: "22px",

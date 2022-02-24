@@ -14,7 +14,7 @@ function addToDo({
   Message,
 }) {
   //variables
-  const defualtValue = "...";
+  const defualtValue = null;
   //functionalitis
   const putTitle = (e) => {
     Title = e.target.value;
