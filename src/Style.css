@@ -212,7 +212,6 @@ header {
   justify-content: space-between;
   align-items: center;
   margin: 2px 0;
-  overflow: hidden;
 }
 .item:first-child {
   border-radius: 5px 5px 0 0;
@@ -233,7 +232,6 @@ input[type="checkbox"] {
 .itemTitle {
   font-weight: bold;
   max-width: 290px;
-  overflow: hidden;
 }
 .itemMessage {
   font-size: 90%;
@@ -314,7 +312,6 @@ footer {
     margin: 0;
     height: calc(100% - 120px);
     max-height: unset;
-    position: relative;
   }
   .arrowSVG {
     width: 45px;
