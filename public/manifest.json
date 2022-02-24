@@ -3,8 +3,8 @@
   "short_name": "TDL",
   "theme_color": "#680ef1",
   "background_color": "#680ef1",
-  "scope": "/",
-  "start_url": "/",
+  "scope": "/todolist/",
+  "start_url": "https://fitdesign.ir/projects/todolist/",
   "display": "standalone",
   "icons": [
     {
