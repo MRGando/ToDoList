@@ -3,6 +3,8 @@
   "short_name": "TDL",
   "theme_color": "#680ef1",
   "background_color": "#680ef1",
+  "scope": "/",
+  "start_url": "/",
   "display": "standalone",
   "icons": [
     {
