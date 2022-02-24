@@ -19,14 +19,16 @@ function App() {
   const [items, setItems] = useState([...ex]);
   const [show, setShow] = useState(false);
   const [error, setError] = useState(false);
-  const nameData = JSON.parse(localStorage.getItem("fullName"));
+  const nameData = [
+    JSON.parse(localStorage.getItem("fisrtName")),
+    JSON.parse(localStorage.getItem("lastName")),
+  ];
   //functionalities
   const setting = () => {
-    const fullName = prompt(
-      "What's your name?",
-      "Type your full name ..."
-    ).split(" ");
-    localStorage.setItem("fullName", JSON.stringify(fullName));
+    const fisrtName = prompt("What's your first name? ex: john");
+    const lastName = prompt("What's your last name? ex: duo");
+    localStorage.setItem("firstName", JSON.stringify(fisrtName));
+    localStorage.setItem("lastName", JSON.stringify(lastName));
     window.location.reload(true);
   };
   return (

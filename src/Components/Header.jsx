@@ -3,8 +3,8 @@ import { AiOutlineAppstoreAdd } from "react-icons/ai";
 
 function Header({ items, setShow, nameData }) {
   //variables
-  let userFirstName = nameData ? nameData[0] : "you";
-  let userLastName = nameData ? nameData[1] : " ";
+  let userFirstName = nameData[0] ? nameData[0] : "you";
+  let userLastName = nameData[1] ? nameData[1] : " ";
   let Icon = `https://avatars.dicebear.com/api/big-ears-neutral/${userFirstName}.svg`;
 
   //functionalities
