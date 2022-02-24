@@ -1,15 +1,11 @@
 import React from "react";
 import { AiOutlineAppstoreAdd } from "react-icons/ai";
 
-function Header({ items, setShow, nameData, genData }) {
+function Header({ items, setShow, nameData }) {
   //variables
   let userFirstName = nameData ? nameData[0] : "you";
   let userLastName = nameData ? nameData[1] : " ";
-  let userGender = genData === "female" ? "male" : "female";
-  let Icon =
-    userGender === "female"
-      ? `https://avatars.dicebear.com/api/big-ears-neutral/female/${userFirstName}.svg`
-      : `https://avatars.dicebear.com/api/big-ears-neutral/male/${userFirstName}.svg`;
+  let Icon = `https://avatars.dicebear.com/api/big-ears-neutral/${userFirstName}.svg`;
 
   //functionalities
   const _generate_full_name = () => {

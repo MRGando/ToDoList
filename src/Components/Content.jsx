@@ -7,6 +7,7 @@ function Content({ items, setItems }) {
     const listItems = items.map((item) =>
       id === item.id ? { ...item, checked: !item.checked } : item
     );
+    localStorage.setItem("toDoList", JSON.stringify(listItems));
     setItems(listItems);
   };
 

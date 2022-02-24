@@ -20,16 +20,13 @@ function App() {
   const [show, setShow] = useState(false);
   const [error, setError] = useState(false);
   const nameData = JSON.parse(localStorage.getItem("fullName"));
-  const genData = JSON.parse(localStorage.getItem("gender"));
   //functionalities
   const setting = () => {
     const fullName = prompt(
       "What's your name?",
       "Type your full name ..."
     ).split(" ");
-    const user_gender = prompt("Female or Male ?", "male , female ...");
     localStorage.setItem("fullName", JSON.stringify(fullName));
-    localStorage.setItem("gender", JSON.stringify(user_gender));
     window.location.reload(true);
   };
   return (
@@ -40,12 +37,7 @@ function App() {
       </div>
       <img className="SVG_Right SVG" width={300} src={ModelOne} alt="" />
       <div className="Container">
-        <Header
-          items={items}
-          setShow={setShow}
-          nameData={nameData}
-          genData={genData}
-        />
+        <Header items={items} setShow={setShow} nameData={nameData} />
         <Content items={items} setItems={setItems} />
         <Footer />
       </div>
