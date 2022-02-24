@@ -278,6 +278,9 @@ footer {
 .secret {
   display: none;
 }
+.itemText {
+  word-wrap: break-word;
+}
 @media only screen and (max-width: 500px) {
   .Container {
     padding-top: 2em;
@@ -292,7 +295,6 @@ footer {
     min-width: 30px;
   }
   .itemText {
-    width: 95%;
   }
   .setting_section {
     top: unset;
