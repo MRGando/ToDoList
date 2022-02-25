@@ -2,6 +2,7 @@ import React from "react";
 import { AiOutlineAppstoreAdd } from "react-icons/ai";
 import arrow from "./Dependencies/arrow.svg";
 import Item from "./Item";
+
 function Content({ items, setItems }) {
   const handleCheck = (id) => {
     const listItems = items.map((item) =>

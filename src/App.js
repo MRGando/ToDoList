@@ -6,9 +6,10 @@ import ModelOne from "./Components/Dependencies/model.svg";
 import ModelTwo from "./Components/Dependencies/model2.svg";
 import AddToDo from "./Components/addToDo";
 import { AiOutlineSetting } from "react-icons/ai";
-
+let audio = new Audio("./Dependencies/sound.wav");
 function App() {
   //Variables
+  audio.play();
   let Title = "";
   let Message = "";
 

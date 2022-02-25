@@ -1,5 +1,6 @@
 import React from "react";
 import { GrTrash } from "react-icons/gr";
+
 function Item({ handleCheck, deleteItem, items }) {
   return (
     <div className="content">
@@ -7,6 +8,7 @@ function Item({ handleCheck, deleteItem, items }) {
         <div key={item.id} className="item">
           <div className="group">
             <input
+              className="checkbox"
               type="checkbox"
               onChange={() => handleCheck(item.id)}
               checked={item.checked}
